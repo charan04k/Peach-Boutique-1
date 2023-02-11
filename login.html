@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #tt{
+            border: 1px solid red;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div id="navbarOfLogin">
+            <a href="./index.html" id="">Peach Boutique</a>
+            <a href="./index.html" id="">Home</a>
+          </div>
+          
+          <div id="tt">
+            <h3>LogIn</h3>
+          <table>
+            <form id="login-form">
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                        <td><input type="password" id="password" name="password" required>
+                        </td>    
+                </tr>
+                <tr>
+                    <td><button type="submit">Login</button></td>
+                </tr>
+                
+            </form>
+
+            
+        </table>
+    </div>
+        <h1 id="log"></h1>
+          
+          
+          <!-- JavaScript code -->
+          <script>
+            const form = document.querySelector('#login-form');
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+              const email = document.querySelector('#email').value;
+              const password = document.querySelector('#password').value;
+              var show =document.getElementById("log")
+              
+              if (email === 'karthick25042000@gmail.com' && password === '123') {
+                
+                let z=show.innerHTML='Logged In </h1><a href="./index.html">clik me to view page</a>'
+        
+                
+              } else {
+                
+                alert('Incorrect email or password');
+              }
+            });
+          </script>
+    
+    <p id="log"></p>
+    
+</body>
+</html>
